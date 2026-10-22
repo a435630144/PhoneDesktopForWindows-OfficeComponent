@@ -6,12 +6,13 @@ app 里的「设置 ▸ 组件库 ▸ 组件商店」按 `index.json` 拉清单�
 
 ## 双镜像是刻意的
 
-app 侧顺序 **gitee → github**（`src/widget_store.py` 的 `MIRRORS`）：
+app 侧顺序 **gitee → github → jsDelivr**（`src/widget_store.py` 的 `MIRRORS`）：
 
 | 线路 | 地址 | 分支 |
 | --- | --- | --- |
 | gitee（优先） | <https://gitee.com/suibianwanwanay/phone-desktop-for-windows-office-component> | `master` |
 | github（兜底） | <https://github.com/a435630144/PhoneDesktopForWindows-OfficeComponent> | `main` |
+| jsDelivr（GitHub 的 CDN 镜像，第三条） | `https://cdn.jsdelivr.net/gh/a435630144/PhoneDesktopForWindows-OfficeComponent@main` | `main` |
 
 上次成功的线路会被记进 app 的缓存，下次先问它——避免每次都在超时上白等。
 **两个仓库必须同时推**，否则国内用户拉不到更新（或海外用户兜底失效）。
