@@ -1,0 +1,21 @@
+{
+  "id": "countdown",
+  "name": "倒计时",
+  "summary": "距离某个日子还有多少天，过完自动显示已过天数",
+  "category": "时间",
+  "spans": [[2, 2], [4, 2]],
+  "module": "widget.py",
+  "factory": "CountdownWidget",
+  "anchored": true,
+  "interactive": false,
+  "multi": true,
+  "version": "1.0.0",
+  "settings": [
+    {"key": "title", "label": "标题", "kind": "text", "default": "项目上线",
+     "placeholder": "例如：年假"},
+    {"key": "date", "label": "目标日期", "kind": "text", "default": "",
+     "placeholder": "YYYY-MM-DD，留空 = 今天"},
+    {"key": "unit", "label": "单位", "kind": "combo", "default": "day",
+     "choices": [["day", "天"], ["week", "周"] ]}
+  ]
+}

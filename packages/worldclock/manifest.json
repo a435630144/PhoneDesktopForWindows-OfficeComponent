@@ -1,0 +1,21 @@
+{
+  "id": "worldclock",
+  "name": "世界时钟",
+  "summary": "第二时区时间，适合盯海外行情或异地家人",
+  "category": "时间",
+  "spans": [[2, 2], [4, 2], [2, 4]],
+  "module": "widget.py",
+  "factory": "WorldClockWidget",
+  "anchored": true,
+  "interactive": false,
+  "multi": true,
+  "version": "1.0.0",
+  "settings": [
+    {"key": "title", "label": "标题", "kind": "text", "default": "伦敦"},
+    {"key": "offset", "label": "时区偏移", "kind": "combo", "default": 0,
+     "choices": [[-8, "UTC-8 洛杉矶"], [-5, "UTC-5 纽约"], [0, "UTC+0 伦敦"],
+                 [1, "UTC+1 巴黎"], [4, "UTC+4 迪拜"], [7, "UTC+7 曼谷"],
+                 [8, "UTC+8 北京"], [9, "UTC+9 东京"], [10, "UTC+10 悉尼"]]},
+    {"key": "date", "label": "显示日期", "kind": "bool", "default": true}
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "widgets": [
+    {
+      "type": "countdown",
+      "name": "倒计时",
+      "summary": "距离某个日子还有多少天，过完自动显示已过天数",
+      "category": "时间",
+      "version": "1.0.0",
+      "spans": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "package": "countdown-1.0.0.zip",
+      "sha256": "793bf9bddf9d4242acfd8c415b55723d5b67b01a0053826db99b4ea3d96f5773",
+      "size": 2699,
+      "author": "",
+      "min_app": ""
+    },
+    {
+      "type": "worldclock",
+      "name": "世界时钟",
+      "summary": "第二时区时间，适合盯海外行情或异地家人",
+      "category": "时间",
+      "version": "1.0.0",
+      "spans": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "package": "worldclock-1.0.0.zip",
+      "sha256": "3f1c75207f7b66d9050fce1c8cb252ab5a9826a68d28529a217d489c99d3765b",
+      "size": 2546,
+      "author": "",
+      "min_app": ""
+    }
+  ]
+}
