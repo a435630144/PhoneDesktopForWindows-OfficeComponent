@@ -118,7 +118,11 @@ def build_index(folders) -> dict:
             "category": str(manifest.get("category") or "其他"),
             "version": str(manifest.get("version") or "0.0.0"),
             "spans": manifest.get("spans") or [[2, 2]],
-            "package": zip_path.name,
+            # 必须写**仓库内完整相对路径**（含 dist/ 前缀）：客户端是
+            # `base + "/" + package` 直接拼 URL 的。旧版只写文件名，
+            # 于是 raw/master/countdown-1.0.0.zip 一律 404（根目录没有 zip，
+            # zip 在 dist/ 下）——v10 反馈 28 实机报"gitee: HTTP Error 404"。
+            "package": zip_path.relative_to(ROOT).as_posix(),
             "sha256": sha256(zip_path),
             "size": zip_path.stat().st_size,
             "author": str(manifest.get("author") or ""),
